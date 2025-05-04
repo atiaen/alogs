@@ -1,0 +1,19 @@
+[
+    {
+        "label": "About",
+        "url": "/about"
+    },
+    {
+        "label": "Tag List",
+        "url": "/tags"
+    },
+    {
+        "label": "Posts",
+        "url": "/posts"
+    },
+    {
+        "label": "GitHub",
+        "url": "https://github.com/atiaen",
+        "newTab": true
+    }
+]
