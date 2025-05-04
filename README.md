@@ -1,4 +1,4 @@
-# AOLOGS OR ALOGS
+# ALOGS
 Hi my name is Adeayo and this is my personal blog/portfolio site based on this Vredeburg[https://github.com/daflh/vredeburg.git]
 
 

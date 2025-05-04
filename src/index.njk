@@ -1,16 +1,15 @@
 ---
 layout: default
-pagination:
-    data: collections.pagedPosts
-    size: 1
-    alias: paged
-permalink: "{% if paged.number > 1 %}page/{{ paged.number }}/{% endif %}index.html"
+title: Home
+permalink: index.html
 ---
 
-<div class="flex flex-wrap -mx-2">
-    {% include "partials/post-grid.njk" %}
+<div class="flex flex-col md:flex-row items-center">
+    <div class="md:mr-9 text-slate-800">{% include "icons/work_in_progress.svg" %}</div>
+    <div class="mt-5 md:mt-0 text-center md:text-left text-slate-800">
+        <h1 class="text-6xl font-medium mt-2 mb-5">Sorryyyyyyyyyy......</h1>
+        <h2 class="text-2xl text-slate-800 font-medium leading-snug mb-3 mt-0">This page isn't quite ready just yet</h2>
+        <p class="mb-4 md:mb-3 text-slate-600">But check out the posts. I can atleast have you reading something first</p>
+        <a href="{{ '/posts' | url }}" class="text-teal-600 font-semibold">GO SEE THE BLOG POSTSSSS</a>
+    </div>
 </div>
-
-{% if collections.posts.length > site.paginate %}
-{% include "partials/paginator.njk" %}
-{% endif %}
