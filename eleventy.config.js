@@ -1,3 +1,6 @@
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
+
 module.exports = (config) => {
   config.addPassthroughCopy('src/assets/img/**/*');
   config.addPassthroughCopy({ 'src/posts/img/**/*': 'assets/img/' });
@@ -16,6 +19,12 @@ module.exports = (config) => {
   config.addCollection('tagList', require('./lib/collections/tagList'));
   config.addCollection('pagedPosts', require('./lib/collections/pagedPosts'));
   config.addCollection('pagedPostsByTag', require('./lib/collections/pagedPostsByTag'));
+
+	// config.addPlugin(eleventyImageTransformPlugin);
+
+  config.addNunjucksGlobal('currentYear',() => {
+    return new Date().getFullYear();
+  })
 
   return {
     dir: {

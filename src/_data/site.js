@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'ALOGS',
-  description: 'All blog posts adeayo',
+  title: 'Adeayo Oladipo',
+  description: 'Adeayo Oladipo',
   keywords: ['blog', 'adeayo', 'gamedev', 'programming'],
   url: 'https://adeayo.blog', // your site url without trailing slash
   paginate: 6 // how many posts you want to show for each page

@@ -21,11 +21,12 @@
   "author": "Adeayo Oladipo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/daflh/vredeburg/issues"
+    "url": "https://github.com/atiaen/aologs/issues"
   },
-  "homepage": "https://github.com/daflh/vredeburg#readme",
+  "homepage": "https://github.com/atiaen/aologs#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-img": "^6.0.2",
     "@tailwindcss/typography": "^0.5.9",
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
