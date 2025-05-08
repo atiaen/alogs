@@ -5,6 +5,7 @@ thumb: "small-business.jpg"
 tags: 
     - tips
     - business
+    - posts
 ---
 
 When you start your small business, you will quickly become aware that there are many other little, but really important things as addition to the creation of the value that your small business will ship to the customers.

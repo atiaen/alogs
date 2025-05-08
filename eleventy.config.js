@@ -1,9 +1,9 @@
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 
 module.exports = (config) => {
   config.addPassthroughCopy('src/assets/img/**/*');
   config.addPassthroughCopy({ 'src/posts/img/**/*': 'assets/img/' });
+  config.addPassthroughCopy("src/assets/fonts");
 
   config.addWatchTarget("src/assets/js/");
 

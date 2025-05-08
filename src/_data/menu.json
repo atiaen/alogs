@@ -1,14 +1,14 @@
 [
     {
-        "label": "Tag List",
+        "label": "TAGS",
         "url": "/tags"
     },
     {
-        "label": "Posts",
+        "label": "POSTS",
         "url": "/posts.html"
     },
     {
-        "label": "GitHub",
+        "label": "GITHUB",
         "url": "https://github.com/atiaen",
         "newTab": true
     }

@@ -6,6 +6,7 @@ tags:
     - tips
     - motive
     - sample
+    - posts
 ---
 
 I’ve been a lifelong procrastinator, at least until recent years. I would put things off until deadline, because I knew I could come through. I came through on tests after cramming last minute, I turned articles in at the deadline after waiting until the last hour, I got things done.
