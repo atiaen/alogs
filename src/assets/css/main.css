@@ -5,7 +5,7 @@
 @layer base {
   
   body {
-    font-family: kenney_future_square_webfont,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
+    font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
   }
 
   @font-face {
