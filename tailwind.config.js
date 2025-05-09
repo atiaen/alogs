@@ -16,41 +16,41 @@ module.exports = {
         DEFAULT: {
           css: {
             'h1':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
               'text-decoration': 'underline',
 
             },
             'h2':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
               'text-decoration': 'underline',
 
             },
             'h3':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
               'text-decoration': 'underline',
 
             },
             'h4':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
               'text-decoration': 'underline',
 
             },
             'a':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
             },
             'strong':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
             },
             'code':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
 
             },
             'pre':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
 
             },
             'th':{
-              color:'rgb(228, 224, 224)',
+              color:'rgb(98, 92, 167)',
 
             },
             'blockquote': {
