@@ -5,7 +5,7 @@
 @layer base {
   
   body {
-    font-family: kenney_pixel_squareregular,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
+    font-family: sharetech-regular,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
   }
 
   @font-face {
@@ -35,6 +35,14 @@
 
 }
 
+
+@font-face {
+  font-family: 'sharetech-regular';
+  src: url('/assets/fonts/ShareTech-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 
 
