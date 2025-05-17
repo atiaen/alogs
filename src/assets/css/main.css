@@ -5,13 +5,22 @@
 @layer base {
   
   body {
-    font-family: sharetech-regular,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
+    font-family: gugi,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
   }
 
   @font-face {
     font-family: 'kenney_bold_webfont';
     src: url('/assets/fonts/kenney_bold-webfont.woff2') format('woff2'),
     url('/assets/fonts/kenney_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'gugi';
+    src: url('/assets/fonts/Gugi-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Gugi-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
