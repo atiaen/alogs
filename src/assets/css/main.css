@@ -90,4 +90,9 @@
 }
 
 
+.custom-position {
+  object-position: 44% 62%;
+}
+
+
 @custom-variant dark (&:where(.dark, .dark *));
