@@ -1,5 +1,5 @@
 ---
-title: "The Shader Tutorial I Wish I Had (Part 1 of ????)"
+title: "The Shader Tutorial I Wish I Had (Part 1)"
 date: 2025-05-19T08:00
 thumb: "basic_shader.gif"
 tags:
@@ -9,7 +9,7 @@ tags:
   - programming
 ---
 
-# The Shader Tutorial I Wish I Had (Part 1 of ????)
+# The Shader Tutorial I Wish I Had (Part 1)
 
 ## Prologue
 
