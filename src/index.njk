@@ -11,17 +11,17 @@ permalink: index.html
             <img class="object-none w-64 h-64 rounded-full custom-position" src="./assets/img/First render.png" alt="Author avatar">
         </a>
     {% endif %}
-    <div class="text-center w-full mt-8 ">
+    <div class="text-center w-full mt-8 flex flex-col items-center ">
         {# <h1 class="text-2xl font-medium text-slate-800 leading-relaxed mt-0 mb-1">
             <a href="{{ author.homepage | url }}" target="_blank" rel="noopener">{{ author.name }}</a>
         </h1> #}
         {% if author.bio %}
-            <p class="mt-3 text-white">{{ author.bio }}</p>
+            <p class="mt-3 container max-w-lg text-black dark:text-white">{{ author.bio }}</p>
         {% endif %}
         {% if author.game_link %}
             <div class="flex flex-col items-center text-lg">
 
-                <p class="mt-3 mb-3 text-white">
+                <p class="mt-3 mb-3 text-black dark:text-white">
                     {{ author.game_link }}
                 </p>
                 <iframe frameborder="0" class="md:w-[552px] md:h-[167px]" src="https://itch.io/embed/2906559?bg_color=37b4ca&amp;fg_color=ffffff&amp;link_color=000000&amp;border_color=1996ac">
@@ -32,20 +32,20 @@ permalink: index.html
         {% endif %}
 
         <div class="mt-10">
-            <p>Recent Posts:</p>
+            <p class="text-black dark:text-white">Recent Posts:</p>
             <div class="mt-6 grid gap-6 md:grid-cols-3 w-full max-w-5xl mx-auto">
                 {% for post in latest_posts.slice(0, 3) %}
                     <article class="bg-white dark:bg-neutral-900 rounded-lg shadow-md p-6 transition hover:shadow-lg">
                         <a href="{{ post.url | url }}">
-                            <img class="w-full m-0 rounded-t lazy" src="{{ lazyImage }}" data-src="{% if post.data.thumb %}{{ post.data.thumb | url }}{% else %}{{ '/assets/img/no-image.svg' | url }}{% endif %}" width="960" height="500" alt="This post thumbnail">
+                            <img class="w-full text-black dark:text-white m-0 rounded-t lazy" src="{{ lazyImage }}" data-src="{% if post.data.thumb %}{{ post.data.thumb | url }}{% else %}{{ '/assets/img/no-image.svg' | url }}{% endif %}" width="960" height="500" alt="This post thumbnail">
                         </a>
                         <h2 class="text-xl font-semibold mb-2">
-                            <a href="{{ post.url | url }}" class="text-white hover:underline">{{ post.data.title }}</a>
+                            <a href="{{ post.url | url }}" class="text-black dark:text-white hover:underline">{{ post.data.title }}</a>
                         </h2>
-                        <p class="text-sm text-gray-200 dark:text-gray-200 mb-4">
+                        <p class="text-sm text-black dark:text-gray-200 mb-4">
                             {{ post.date | readableDate }}
                         </p>
-                        <p class="text-base text-white dark:text-white">
+                        <p class="text-base text-black dark:text-white">
                             {{ post.data.description or post.templateContent | striptags | truncate(90, true, "...") }}
                         </p>
                     </article>

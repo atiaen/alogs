@@ -1,23 +1,23 @@
-[
+  [
     {
         "project": "Cribro",
-        "project_brief": "Cribro is a data management solution",
-        "lessons_learnt": "Some lessons",
-        "my_work": "Designed rule",
+        "project_brief": "Cribro is a cloud-native Master Data Management (MDM) solution designed to manage and validate the quality of customer data at scale.",
+        "lessons_learnt": "I learned how to lead a cross-functional team, manage my time under pressure, identify my own limits, and adapt to solving highly complex technical problems.",
+        "my_work": "Led the backend development of core components including the rule engine, ETL system, analytics module, and job scheduler while collaborating closely with product stakeholders and UI/UX teams.",
         "url": "https://bluechiptech.biz/master-data-management/"
     },
-     {
-        "project": "Cash Complete",
-        "project_brief": "Cash management",
-        "lessons_learnt": "Some lessons",
-        "my_work": "Designed rule",
+    {
+        "project": "CashComplete",
+        "project_brief": "CashComplete is a cloud-native cash management platform that enables banks to monitor and manage cash flow across branches and the larger financial ecosystem.",
+        "lessons_learnt": "This was my entry point into software development, where I gained practical experience with full-stack web development, REST APIs, microservices, and software engineering fundamentals.",
+        "my_work": "Started on the frontend, then moved to backend development, contributing to modules such as cash requests and evacuation workflows.",
         "url": "https://bluechiptech.biz/cash-management-solution/"
     },
-     {
+    {
         "project": "Scribr",
-        "project_brief": "Cribro is a data management solution",
-        "lessons_learnt": "Some lessons",
-        "my_work": "Designed rule",
-        "url": "https://bluechiptech.biz/master-data-management/"
+        "project_brief": "Scribr is a privacy-focused desktop transcription tool that converts audio recordings into text using local processing.",
+        "lessons_learnt": "Built entirely for personal use, this project strengthened my understanding of desktop application development, UI rendering, and integrating AI-powered audio processing.",
+        "my_work": "Designed and developed a standalone transcription tool using .NET and Whisper.Net, with a custom UI built using ImGui and Raylib.",
+        "url": "https://github.com/atiaen/scribr"
     }
 ]

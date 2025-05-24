@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<article class="max-w-5xl mx-auto text-white">
+<article class="max-w-5xl mx-auto text-black dark:text-white">
     <header class="mb-14">
-        <h1 class="text-3xl text-center font-bold leading-normal text-white mt-0 mb-3">{{ title }}</h1>
-        <div class="text-center text-neutral-300">Published on {{ page.date | readableDate }}</div>
+        <h1 class="text-3xl text-center font-bold leading-normal text-black dark:text-white mt-0 mb-3">{{ title }}</h1>
+        <div class="text-center text-black dark:text-white">Published on {{ page.date | readableDate }}</div>
         {% if tags %}
         <div class="mt-3 text-center">
             {% for tag in tags %}
@@ -19,7 +19,7 @@ layout: default
         </div>
         {% endif %}
     </header>
-    <div id="content" class="prose text-white max-w-none">
+    <div id="content" class="prose prose prose-p:text-black dark:prose-p:text-white text-black dark:text-white max-w-none">
         {{ content | safe }}
     </div>
     {% if site.disqusShortname %}
