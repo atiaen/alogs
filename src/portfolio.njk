@@ -1,0 +1,159 @@
+---
+layout: default
+title: Portfolio
+description: A showcase of projects and work I've completed over the years
+permalink: /portfolio/
+---
+
+<div class="min-h-screen bg-white dark:bg-neutral-800">
+  <!-- Hero Section -->
+  <section class="pt-16 pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-white mb-6 underline">
+        My Portfolio
+      </h1>
+      <p class="text-xl text-slate-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        A collection of projects that showcase my skills, creativity, and problem-solving approach. 
+        Each project represents a unique challenge and learning opportunity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      {% if portfolio_projects.length > 0 %}
+        <div class="grid gap-8 md:gap-12">
+          {% for project in portfolio_projects %}
+            <article class="bg-white dark:bg-neutral-700 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200 dark:border-neutral-600">
+              <!-- Project Header -->
+              <div class="bg-gradient-to-r from-purple-600 to-violet-500 px-6 py-8 sm:px-8">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 underline">
+                      {{ project.project }}
+                    </h2>
+                    {% if project.url %}
+                      <a href="{{ project.url }}" 
+                         class="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-lg font-medium transition-all duration-200 hover:scale-105"
+                         target="_blank" 
+                         rel="noopener noreferrer">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                        View Project
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Content -->
+              <div class="p-6 sm:p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                  <!-- Project Brief -->
+                  <div class="space-y-4">
+                    <div>
+                      <h3 class="text-lg font-semibold text-slate-800 dark:text-purple-300 mb-3 flex items-center underline">
+                        <div class="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                        Project Overview
+                      </h3>
+                      <div class="prose prose-gray dark:prose-invert max-w-none text-slate-700 dark:text-gray-300">
+                        {{ project.project_brief | safe }}
+                      </div>
+                    </div>
+
+                    <!-- My Work -->
+                    {% if project.my_work %}
+                      <div>
+                        <h3 class="text-lg font-semibold text-slate-800 dark:text-purple-300 mb-3 flex items-center underline">
+                          <div class="w-2 h-2 bg-violet-400 rounded-full mr-3"></div>
+                          My Contribution
+                        </h3>
+                        <div class="prose prose-gray dark:prose-invert max-w-none text-slate-700 dark:text-gray-300">
+                          {{ project.my_work | safe }}
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+
+                  <!-- Lessons Learned -->
+                  {% if project.lessons_learnt %}
+                    <div>
+                      <h3 class="text-lg font-semibold text-slate-800 dark:text-purple-300 mb-3 flex items-center underline">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                        Key Takeaways
+                      </h3>
+                      <div class="bg-gray-50 dark:bg-neutral-600 rounded-xl p-6 border border-gray-200 dark:border-neutral-500">
+                        <div class="prose prose-gray dark:prose-invert max-w-none text-slate-700 dark:text-gray-300">
+                          {{ project.lessons_learnt | safe }}
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+
+                <!-- Project Footer -->
+                <div class="mt-8 pt-6 border-t border-gray-200 dark:border-neutral-600">
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div class="flex items-center text-sm text-slate-500 dark:text-gray-400">
+                      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      Project #{{ loop.index }}
+                    </div>
+                    {% if project.url %}
+                      <a href="{{ project.url }}" 
+                         class="text-purple-300 hover:text-purple-200 font-medium text-sm transition-colors duration-200"
+                         target="_blank" 
+                         rel="noopener noreferrer">
+                        Learn more →
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        <!-- Portfolio Stats -->
+        <div class="mt-16 bg-white dark:bg-neutral-700 rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-200 dark:border-neutral-600">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 underline">Portfolio Summary</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-400 mb-1">{{ portfolio_projects.length }}</div>
+                <div class="text-slate-600 dark:text-gray-300">Total Projects</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-violet-400 mb-1">
+                  {{ portfolio_projects | selectattr("url") | list | length }}
+                </div>
+                <div class="text-slate-600 dark:text-gray-300">Live Projects</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-300 mb-1">
+                  {{ portfolio_projects | selectattr("lessons_learnt") | list | length }}
+                </div>
+                <div class="text-slate-600 dark:text-gray-300">Documented Learnings</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {% else %}
+        <!-- Empty State -->
+        <div class="text-center py-16">
+          <div class="max-w-md mx-auto">
+            <svg class="w-20 h-20 mx-auto text-gray-300 dark:text-gray-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">No Projects Yet</h3>
+            <p class="text-slate-600 dark:text-gray-300">Portfolio projects will appear here once they're added to the data file.</p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+</div>

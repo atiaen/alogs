@@ -20,7 +20,7 @@
 {%- endif -%}
 {%- endset -%}
 <!DOCTYPE html>
-<html class="dark">
+<html>
 
     <head>
         <meta charset="utf-8">
@@ -52,15 +52,15 @@
                 {{ content | safe }}
                 <div class="text-center mt-12">
 
- <h1 class="text-white text-xl">Comments: </h1>
-                <script src="https://utteranc.es/client.js"
+                    <h1 class="text-white text-xl">Comments: </h1>
+                    <script src="https://utteranc.es/client.js"
         repo="atiaen/alogs"
         issue-term="pathname"
         theme="github-dark"
         crossorigin="anonymous"
         async></script>
                 </div>
-               
+
             {% else %}
                 <div class="mx-auto text-white">
                     {{ content | safe }}

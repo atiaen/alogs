@@ -49,3 +49,73 @@ document.addEventListener('DOMContentLoaded', () => {
     elem.removeAttribute('data-src');
   });
 }, false);
+
+
+// Theme toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or default to 'dark'
+    function getTheme() {
+        if (typeof(Storage) !== "undefined") {
+            return localStorage.getItem('theme') || 'dark';
+        }
+        return 'dark';
+    }
+
+    // Save theme preference
+    function setTheme(theme) {
+        if (typeof(Storage) !== "undefined") {
+            localStorage.setItem('theme', theme);
+        }
+    }
+
+    // Apply theme to HTML element and update icons
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            htmlElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+            themeToggleDarkIcon.classList.add('hidden');
+        } else {
+            htmlElement.classList.remove('dark');
+            themeToggleLightIcon.classList.add('hidden');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+    }
+
+    // Initialize theme on page load
+    const currentTheme = getTheme();
+    applyTheme(currentTheme);
+
+    // Toggle theme when button is clicked
+    themeToggleBtn.addEventListener('click', function() {
+        const currentTheme = getTheme();
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        setTheme(newTheme);
+        applyTheme(newTheme);
+    });
+
+    // Listen for system theme changes (optional)
+    if (window.matchMedia) {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Only apply system preference if no saved preference exists
+        if (!localStorage.getItem('theme')) {
+            const systemTheme = mediaQuery.matches ? 'dark' : 'light';
+            applyTheme(systemTheme);
+        }
+
+        // Listen for changes in system preference
+        mediaQuery.addEventListener('change', function(e) {
+            // Only apply if no saved preference exists
+            if (!localStorage.getItem('theme')) {
+                const systemTheme = e.matches ? 'dark' : 'light';
+                applyTheme(systemTheme);
+            }
+        });
+    }
+});

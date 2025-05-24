@@ -11,5 +11,10 @@
         "label": "GITHUB",
         "url": "https://github.com/atiaen",
         "newTab": true
+    },
+      {
+        "label": "PORTFOLIO",
+        "url": "/portfolio"
+
     }
 ]
