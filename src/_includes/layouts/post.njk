@@ -22,13 +22,4 @@ layout: default
     <div id="content" class="prose prose prose-p:text-black dark:prose-p:text-white text-black dark:text-white max-w-none">
         {{ content | safe }}
     </div>
-    {% if site.disqusShortname %}
-    <div class="mt-10">
-        {% if process.environment === "production" %}
-        {% include "partials/disqus.njk" %}
-        {% else %}
-        <div class="italic text-white">Disqus comments only available for production</div>
-        {% endif %}
-    </div>
-    {% endif %}
 </article>

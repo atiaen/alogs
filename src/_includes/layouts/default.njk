@@ -42,7 +42,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
-        <script defer src="https://cloud.umami.is/script.js" data-website-id="f4bd03da-f009-45be-a905-76d655d75284"></script>
+        {% if process.environment === "production" %}
+            <script defer src="https://cloud.umami.is/script.js" data-website-id="f4bd03da-f009-45be-a905-76d655d75284"></script>
+        {% endif %}
+
     </head>
 
     <body class="w-full h-screen bg-white dark:bg-neutral-800 text-slate-800 break-words">
