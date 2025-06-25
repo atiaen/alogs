@@ -1,6 +1,6 @@
 ---
 title: "Falling for the Programmer's Trap AGAIN"
-date: 2025-05-19T08:00
+date: 2025-06-26T09:00
 thumb: "RaspberryPi5Edited.jpeg"
 tags:
   - learning
